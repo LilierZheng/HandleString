@@ -1,0 +1,6 @@
+F:\HandleString\ConsoleHandleString\ConsoleHandleString\bin\Debug\ConsoleHandleString.exe.config
+F:\HandleString\ConsoleHandleString\ConsoleHandleString\bin\Debug\ConsoleHandleString.exe
+F:\HandleString\ConsoleHandleString\ConsoleHandleString\bin\Debug\ConsoleHandleString.pdb
+F:\HandleString\ConsoleHandleString\ConsoleHandleString\obj\Debug\ConsoleHandleString.csprojResolveAssemblyReference.cache
+F:\HandleString\ConsoleHandleString\ConsoleHandleString\obj\Debug\ConsoleHandleString.exe
+F:\HandleString\ConsoleHandleString\ConsoleHandleString\obj\Debug\ConsoleHandleString.pdb
