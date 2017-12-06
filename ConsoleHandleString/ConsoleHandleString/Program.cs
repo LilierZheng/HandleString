@@ -14,9 +14,9 @@ namespace ConsoleHandleString
         static void Main(string[] args)
         {
             //output timespan
-            string text = File.ReadAllText(@"F:\HandleString\Article.txt");
-            text.Replace(',', ' ');
-            text.Replace('.', ' ');
+            string text = File.ReadAllText(@"..\..\..\..\Article.txt");
+            text=text.Replace(',', ' ');
+            text=text.Replace('.', ' ');
             Regex regex = new Regex("\\s+");
             String[] ary = regex.Split(text);
             // 分词并且定义英文中不代表实际意义的一些单词，如介词、代词、情态动词等  
@@ -73,14 +73,18 @@ namespace ConsoleHandleString
             ts = dtEnd - dtBegin;
             Console.WriteLine("统计不重复单词数量，所需时间间隔数：{0}秒", ts.TotalSeconds);
             Console.ReadLine();
-            string path = @".\outPut.txt";
+            string path = @"..\..\..\..\outPut.txt";
             Console.WriteLine("写入文件路径{0}", path);
             Console.ReadLine();
 
-            FileStream fs = new FileStream(@"F:\HandleString\outPut.txt", FileMode.Create);
+            FileStream fs = new FileStream(path, FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);
-            string s = dictionaryToJson(noRepeatWordsDic);
-            sw.Write(s);
+            foreach (var item in noRepeatWordsDic)
+            {
+                sw.WriteLine(item.Key + " " + item.Value);
+            }
+          //  string s = dictionaryToJson(noRepeatWordsDic);
+         //   sw.Write(s);
             sw.Flush();
             sw.Close();
             fs.Close();
